@@ -15,7 +15,6 @@ public class One {
 
     public static void main(String args[]) {
         //int CommandLineArgument1 = Integer.parseInt(args[0]);
-        System.out.println("Hey Alex");
         One myone = new One();
         System.out.println(myone.findMult(1000));
     }
