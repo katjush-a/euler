@@ -9,36 +9,36 @@ public class MultiplesOfThreeAndFiveTest {
 
     @Test
     public void zeroReturnsZero() throws Exception {
-        MultiplesOfThreeAndFive multiples = new MultiplesOfThreeAndFive();
-        int sum = multiples.sumBelow(0);
-        assertEquals(sum,0);
+        assertEquals(sumOfMultiplesBelow(0), 0);
     }
 
     @Test
     public void findNoMultiplesBelowThree() throws Exception {
-        MultiplesOfThreeAndFive multiples = new MultiplesOfThreeAndFive();
-        int sum = multiples.sumBelow(3);
-        assertEquals(sum, 0);
+        assertEquals(sumOfMultiplesBelow(3), 0);
     }
 
     @Test
     public void findsOneMultipleBelowFive() throws Exception {
-        MultiplesOfThreeAndFive five = new MultiplesOfThreeAndFive();
-        int sum = five.sumBelow(5);
-        assertEquals(sum, 3);
+        assertEquals(sumOfMultiplesBelow(5), 3);
     }
 
     @Test
     public void findMultOfFifteen() throws Exception {
-        MultiplesOfThreeAndFive fifteen = new MultiplesOfThreeAndFive();
-        int sum = fifteen.sumBelow(15);
-        assertEquals(sum, 45);
+        assertEquals(sumOfMultiplesBelow(15), 45);
+    }
+
+    @Test
+    public void sixteenIncludesFifteen() throws Exception {
+        assertEquals(sumOfMultiplesBelow(16), sumOfMultiplesBelow(15) + 15);
     }
 
     @Test
     public void findMultOfThousand() throws Exception {
-        MultiplesOfThreeAndFive thousand = new MultiplesOfThreeAndFive();
-        int sum = thousand.sumBelow(1000);
-        assertEquals(sum, 233168);
+        assertEquals(sumOfMultiplesBelow(1000), 233168);
     }
+
+    private int sumOfMultiplesBelow(int number) {
+        return new MultiplesOfThreeAndFive().sumBelow(number);
+    }
+
 }

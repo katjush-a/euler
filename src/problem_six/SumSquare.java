@@ -1,3 +1,5 @@
+package problem_six;
+
 public class SumSquare {
 
     public static int getDifference(int number){
@@ -9,14 +11,5 @@ public class SumSquare {
         }
         squareOfSums *= squareOfSums;
         return squareOfSums - sumOfSquares;
-    }
-
-    public static void main(String args[]){
-        SumSquare output = new SumSquare();
-        System.out.println(output.getDifference(10));
-    }
-
-    public int difference(int i) {
-        return SumSquare.getDifference(i);
     }
 }
