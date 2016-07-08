@@ -1,13 +1,13 @@
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
-/**
- * Created by alex on 6/29/16.
- */
 public class SumSquareTest {
-    @org.junit.Test
+    @Test
     public void squareDifferenceOf2(){
         int difference = SumSquare.getDifference(2);
-        assertEquals(4,difference);
+        SumSquare sum = new SumSquare();
+        assertEquals(4,sum.difference(2));
     }
 
     @org.junit.Test
